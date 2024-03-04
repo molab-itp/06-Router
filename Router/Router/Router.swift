@@ -20,7 +20,7 @@ struct Router: App {
 }
 
 class PageModel: ObservableObject {
-    @Published var pageTag : PageEnum = .Page1
+    @Published var pageTag: PageEnum = .Page1
 }
 
 enum PageEnum {
