@@ -9,18 +9,19 @@ import SwiftUI
 
 @main
 struct Router: App {
-    @StateObject var pageModel = PageModel();
+    @State var pageModel = PageModel();
     var body: some Scene {
         WindowGroup {
             // This is the starting page for the app
             MainView()
-                .environmentObject(pageModel)
+                .environment(pageModel)
         }
     }
 }
 
-class PageModel: ObservableObject {
-    @Published var pageTag: PageEnum = .Page1
+@Observable
+class PageModel {
+    var pageTag: PageEnum = .Page1
 }
 
 enum PageEnum {

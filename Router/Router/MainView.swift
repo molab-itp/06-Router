@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var pageModel: PageModel;
+  @Environment(PageModel.self) var pageModel
 
     var body: some View {
         VStack {
@@ -45,5 +45,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
-        .environmentObject(PageModel())
+        .environment(PageModel())
 }
