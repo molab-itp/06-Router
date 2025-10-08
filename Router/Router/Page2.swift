@@ -41,8 +41,6 @@ struct Page2: View {
   }
 }
 
-struct Page2_Previews: PreviewProvider {
-  static var previews: some View {
-    Page2()
-  }
+#Preview {
+  Page2()
 }
