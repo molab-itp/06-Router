@@ -22,25 +22,42 @@ struct MainView: View {
       }
       Spacer()
       Text("Hello, World!")
-      HStack {
-        Button(action: {
-          pageModel.pageTag = .Page1
-        }) {
-          Text("[Page1]")
-        }
-        Button(action: {
-          pageModel.pageTag = .Page3
-        }) {
-          Text("[Page3]")
-        }
-        Button(action: {
-          pageModel.pageTag = .Page5
-        }) {
-          Text("[Page5]")
-        }
+    }
+    // TRY: extract as sub view
+    let extractedExpr: HStack<TupleView<(Button<Text>, Button<Text>, Button<Text>)>> = // TRY: extract as sub view
+    HStack {
+      Button(action: {
+        pageModel.pageTag = .Page1
+      }) {
+        Text("[Page1]")
+          .bold(pageModel.pageTag == .Page1)
+      }
+      Button(action: {
+        pageModel.pageTag = .Page3
+      }) {
+        Text("[Page3]")
+          .bold(pageModel.pageTag == .Page3)
+      }
+      Button(action: {
+        pageModel.pageTag = .Page5
+      }) {
+        Text("[Page5]")
+          .bold(pageModel.pageTag == .Page5)
       }
     }
+    extractedExpr
   }
+}
+
+@Observable
+class PageModel {
+  var pageTag: PageEnum = .Page1
+}
+
+enum PageEnum {
+  case Page1
+  case Page3
+  case Page5
 }
 
 #Preview {

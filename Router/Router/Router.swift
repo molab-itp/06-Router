@@ -19,13 +19,3 @@ struct Router: App {
     }
 }
 
-@Observable
-class PageModel {
-    var pageTag: PageEnum = .Page1
-}
-
-enum PageEnum {
-    case Page1
-    case Page3
-    case Page5
-}

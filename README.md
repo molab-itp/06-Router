@@ -1,6 +1,6 @@
 # [06-Router](https://github.com/molab-itp/06-Router)
 
-- Replaces NavigationView with Router PageModel: ObservableObject
+- Replaces NavigationView with Router @Observable class PageModel
 
 - Based on https://github.com/molab-itp/03-ImageUiDemo-2-urls
 
