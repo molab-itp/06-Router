@@ -8,7 +8,7 @@ struct Page4: View {
     NavigationView {
       List {
         NavigationLink(destination: Page5()) {
-          Text("JHT on Page5")
+          Text("Title Page4")
             .font(.title)
             .bold()
         }
@@ -23,28 +23,34 @@ struct Page4: View {
   }
 }
 
-struct ItemDetail: View {
+struct ItemRow: View {
   var item: Item
   var body: some View {
-    VStack {
-      Image(uiImage: imageFor(string: item.urlStr))
-        .resizable()
-        .aspectRatio(contentMode: .fit)
+    HStack {
+      ImageThumb(urlString: item.urlStr);
       Text(item.label)
       Spacer()
     }
   }
 }
 
-struct ItemRow: View {
+struct ItemDetail: View {
   var item: Item
   var body: some View {
-    HStack {
-      Image(uiImage: imageFor(string: item.urlStr))
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-        .frame(width: 100, height: 100)
-      Text(item.label)
+    VStack {
+      AsyncImage(url: URL(string: item.urlStr)) { phase in
+        if let image = phase.image {
+          image // Displays the loaded image.
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+          // .frame(width:100, height: 100)
+        } else if phase.error != nil {
+          Color.red // Indicates an error.
+        } else {
+          Color.blue // Acts as a placeholder.
+        }
+      }
+      Text(item.label).font(.title)
       Spacer()
     }
   }

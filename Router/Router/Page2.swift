@@ -30,9 +30,7 @@ struct Page2: View {
     VStack {
       ForEach(imageItems) { item in
         HStack {
-          Image(uiImage: imageFor(string: item.urlStr))
-            .resizable()
-            .frame(width: 100, height: 100)
+          ImageThumb(urlString: item.urlStr);
           Text(item.label)
           Spacer()
         }
