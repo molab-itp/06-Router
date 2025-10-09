@@ -23,33 +23,25 @@ struct MainView: View {
       Spacer()
       Text("Hello, World!")
       // TRY: extract as sub view
-      ButtonBar()
-    }
-  }
-}
-
-struct ButtonBar: View {
-  @Environment(PageModel.self) var pageModel
-  
-  var body: some View {
-    HStack {
-      Button(action: {
-        pageModel.pageTag = .Page1
-      }) {
-        Text("[Page1]")
-          .bold(pageModel.pageTag == .Page1)
-      }
-      Button(action: {
-        pageModel.pageTag = .Page3
-      }) {
-        Text("[Page3]")
-          .bold(pageModel.pageTag == .Page3)
-      }
-      Button(action: {
-        pageModel.pageTag = .Page5
-      }) {
-        Text("[Page5]")
-          .bold(pageModel.pageTag == .Page5)
+      HStack {
+        Button(action: {
+          pageModel.pageTag = .Page1
+        }) {
+          Text("[Page1]")
+            .bold(pageModel.pageTag == .Page1)
+        }
+        Button(action: {
+          pageModel.pageTag = .Page3
+        }) {
+          Text("[Page3]")
+            .bold(pageModel.pageTag == .Page3)
+        }
+        Button(action: {
+          pageModel.pageTag = .Page5
+        }) {
+          Text("[Page5]")
+            .bold(pageModel.pageTag == .Page5)
+        }
       }
     }
   }
