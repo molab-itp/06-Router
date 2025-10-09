@@ -22,9 +22,16 @@ struct MainView: View {
       }
       Spacer()
       Text("Hello, World!")
+      // TRY: extract as sub view
+      ButtonBar()
     }
-    // TRY: extract as sub view
-    let extractedExpr: HStack<TupleView<(Button<Text>, Button<Text>, Button<Text>)>> = // TRY: extract as sub view
+  }
+}
+
+struct ButtonBar: View {
+  @Environment(PageModel.self) var pageModel
+  
+  var body: some View {
     HStack {
       Button(action: {
         pageModel.pageTag = .Page1
@@ -45,7 +52,6 @@ struct MainView: View {
           .bold(pageModel.pageTag == .Page5)
       }
     }
-    extractedExpr
   }
 }
 
