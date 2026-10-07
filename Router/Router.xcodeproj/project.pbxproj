@@ -16,7 +16,7 @@
 		AB2422F82B9681C1008A52DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2422EE2B9681C1008A52DF /* Assets.xcassets */; };
 		AB2422F92B9681C1008A52DF /* Page5.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2422EF2B9681C1008A52DF /* Page5.swift */; };
 		AB2422FA2B9681C1008A52DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2422F12B9681C1008A52DF /* Preview Assets.xcassets */; };
-		AB2422FB2B9681C1008A52DF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2422F22B9681C1008A52DF /* Router.swift */; };
+		AB2422FB2B9681C1008A52DF /* RouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2422F22B9681C1008A52DF /* RouterApp.swift */; };
 		AB2422FD2B96852B008A52DF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2422FC2B96852B008A52DF /* MainView.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		AB2422EE2B9681C1008A52DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB2422EF2B9681C1008A52DF /* Page5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5.swift; sourceTree = "<group>"; };
 		AB2422F12B9681C1008A52DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AB2422F22B9681C1008A52DF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AB2422F22B9681C1008A52DF /* RouterApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterApp.swift; sourceTree = "<group>"; };
 		AB2422FC2B96852B008A52DF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		ABE29FC82AB3A03D0072F7C2 /* Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Router.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -49,7 +49,7 @@
 		AB2422E72B9681C1008A52DF /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				AB2422F22B9681C1008A52DF /* Router.swift */,
+				AB2422F22B9681C1008A52DF /* RouterApp.swift */,
 				AB2422FC2B96852B008A52DF /* MainView.swift */,
 				AB2422EB2B9681C1008A52DF /* Page1.swift */,
 				AB2422E82B9681C1008A52DF /* Page2.swift */,
@@ -173,7 +173,7 @@
 				AB2422F92B9681C1008A52DF /* Page5.swift in Sources */,
 				AB2422F32B9681C1008A52DF /* Page2.swift in Sources */,
 				AB2422F42B9681C1008A52DF /* Page4.swift in Sources */,
-				AB2422FB2B9681C1008A52DF /* Router.swift in Sources */,
+				AB2422FB2B9681C1008A52DF /* RouterApp.swift in Sources */,
 				AB2422F52B9681C1008A52DF /* Page3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

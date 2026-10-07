@@ -1,5 +1,5 @@
 //
-//  Router.swift
+//  RouterApp.swift
 //  ImageUiDemo-urls
 //
 //  Created by jht2 on 9/14/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Router: App {
+struct RouterApp: App {
     @State var pageModel = PageModel();
     var body: some Scene {
         WindowGroup {
